@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "For smooth page transitions, micro-interactions, and glassmorphism entrance animations."
+  "clsx": "Utility for constructing className strings conditionally."
+  "tailwind-merge": "Utility function to efficiently merge Tailwind CSS classes."
+
+images:
+  - path: "artifacts/tg-mini-app/public/images/hero-bg.png"
+    description: "Abstract gradient mesh background in deep dark navy blue with subtle neon blue light leaks, minimalist, highly aesthetic, dark theme, smooth blending."
+    aspect_ratio: "9:16"
+
+notes:
+  - The application uses the Telegram Web App API. It expects `window.Telegram.WebApp` to be available. If not (e.g., in a local browser), it gracefully falls back to mock data.
+  - No backend is strictly required; all MVP data is static/mocked as requested.
