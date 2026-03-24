@@ -1,0 +1,14 @@
+packages:
+  "framer-motion": "For fluid tab transitions and element entrance animations"
+  "clsx": "For conditional class name merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+  "lucide-react": "For beautiful consistent icons"
+
+images:
+  - path: "artifacts/admin-panel/public/images/admin-bg.png"
+    description: "Deep dark navy blue abstract background with subtle glowing neon blue soft gradient meshes, premium minimal style"
+    aspect_ratio: "16:9"
+
+notes:
+  - MVP relies on static mock data, no backend API is implemented.
+  - State changes (like request status) are local to the component session.
