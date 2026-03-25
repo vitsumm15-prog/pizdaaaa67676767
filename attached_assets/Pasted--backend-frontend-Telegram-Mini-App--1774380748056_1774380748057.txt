@@ -1,0 +1,92 @@
+Создай полноценное backend + frontend приложение для Telegram Mini App со следующими требованиями:
+
+Технологии:
+Backend: Node.js + Express
+База данных: PostgreSQL (или SQLite если нет PostgreSQL)
+Frontend: простой HTML + JavaScript (Telegram WebApp API)
+Использовать fetch для запросов
+Поддержка WebSocket (или polling) для чата
+Авторизация через Telegram Mini App:
+При открытии приложения получать Telegram initData
+Проверять initData на сервере через bot token
+Если пользователь новый — создавать его в базе
+Если уже есть — обновлять данные
+Сохранять:
+telegram_id
+username
+first_name
+last_seen (обновляется при каждом заходе)
+is_subscribed (boolean)
+Реализовать API:
+
+POST /api/auth
+
+принимает initData
+валидирует пользователя
+создает/обновляет запись в БД
+
+POST /api/subscribe
+
+делает is_subscribed = true для пользователя
+
+GET /api/me
+
+возвращает текущего пользователя
+
+GET /api/admin/users
+
+возвращает список пользователей
+только где last_seen за последние 24 часа
+и (опционально) is_subscribed = true
+Чат система:
+
+Создать таблицу messages:
+
+id
+user_id
+text
+from_admin (boolean)
+created_at
+
+API:
+POST /api/messages
+
+пользователь отправляет сообщение
+
+GET /api/messages
+
+получить сообщения пользователя
+
+POST /api/admin/messages
+
+админ отправляет сообщение пользователю
+
+GET /api/admin/dialogs
+
+список всех диалогов
+Реализовать админ панель:
+отдельный route /admin
+простая HTML страница
+список пользователей
+список диалогов
+просмотр переписки
+возможность отправлять сообщения
+Frontend (Mini App):
+кнопка "Подписаться"
+кнопка "Оформить заказ"
+при нажатии "Оформить заказ" открывается чат
+простой интерфейс чата (сообщения + input)
+Реалтайм:
+реализовать обновление чата через polling каждые 2-3 секунды (или WebSocket если проще)
+Безопасность:
+проверка initData обязательна
+доступ в админ панель только по заранее заданному Telegram ID админа
+Структура проекта:
+server.js
+db.js
+routes/
+public/ (frontend)
+admin/ (админка)
+Добавь комментарии в код, чтобы было понятно что происходит
+
+Сделай рабочий минимальный MVP, который можно сразу запустить в Replit.

@@ -1,0 +1,69 @@
+Create a Telegram Mini App admin panel with a modern, minimalist design in dark blue tones. The app should allow real-time management of participants, incoming requests, purchased items, and messages. Make it mobile-friendly and optimized for Telegram Web App.
+
+📱 Overall structure:
+The admin panel consists of 3 main sections accessible via side or bottom navigation:
+
+1️⃣ Dashboard / Home
+2️⃣ Requests & Purchases
+3️⃣ Messages & Participants
+
+🎨 Design:
+
+Primary color: dark blue (#0B1F3A or similar)
+Accent color: bright blue / neon blue
+Background: dark blue gradient
+Text: white / light gray
+Buttons: rounded, subtle hover/tap animations
+Style: minimalism + glassmorphism (semi-transparent cards)
+
+📄 Section 1: Dashboard / Home
+Purpose — overview of admin data
+
+Blocks:
+
+Quick stats:
+Number of new requests
+Number of purchased items
+Number of unread messages
+Recent activity feed (latest requests, purchases, and messages)
+Buttons for quick actions (e.g., View Requests, View Participants)
+
+💰 Section 2: Requests & Purchases
+Purpose — manage incoming user actions
+
+Blocks:
+
+Table or list of all requests and purchased items:
+User name / ID
+Type of request or item purchased
+Status (Pending, Completed, Rejected)
+Date/time
+Filters: by status, date, or user
+Action buttons: Approve, Reject, Mark as Completed
+
+💬 Section 3: Messages & Participants
+Purpose — interact with users
+
+Blocks:
+
+List of all participants (with Telegram username)
+List of messages sent by participants
+Option to reply directly within the app
+Option to open chat in Telegram for personal communication
+Search participants or messages by username or keyword
+
+⚙️ Functionality:
+
+Real-time updates for requests, purchases, and messages
+Smooth navigation between sections
+Dark theme throughout
+Fast loading, mobile-friendly
+Option to sort and filter data easily
+Option to mark requests/messages as read or completed
+
+✨ Additional:
+
+Clean and minimal interface
+Subtle micro-animations on buttons and cards
+Focus on usability for admins
+Ready to deploy and test inside Telegram Mini Apps
